@@ -390,3 +390,116 @@
         flex: 0 1 220px;
     }
 }
+
+
+/* Mobile Phone Layout - Careers Page */
+@media (max-width: 600px) {
+
+    /* Career Explorer */
+    .career-explorer {
+        padding: 20px 5%;
+    }
+
+    .career-explorer-container {
+        padding: 20px 16px;
+        gap: 18px;
+    }
+
+    .career-explorer-heading h2 {
+        font-size: 23px;
+    }
+
+    .career-search-icon {
+        font-size: 30px;
+    }
+
+    .career-explorer-intro p {
+        margin-left: 0;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    .career-search-form {
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    #career-search {
+        flex: none;
+        width: 100%;
+        height: 48px;
+        box-sizing: border-box;
+    }
+
+    #career-search-button {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .career-search-results {
+        padding: 16px;
+        overflow-wrap: anywhere;
+    }
+
+    /* Career Opportunities Image */
+    .career-image-container img {
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    /* Roadmap */
+    .career-roadmap {
+        padding: 25px 5% 35px;
+    }
+
+    .career-roadmap h2 {
+        font-size: 27px;
+        gap: 10px;
+    }
+
+    .career-roadmap h2::before,
+    .career-roadmap h2::after {
+        width: 25px;
+        flex-shrink: 0;
+    }
+
+    .roadmap-description {
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .roadmap-steps {
+        flex-direction: column;
+        align-items: center;
+        gap: 45px;
+    }
+
+    .roadmap-step {
+        flex: none;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .roadmap-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 30px;
+    }
+
+    .roadmap-step h3 {
+        font-size: 20px;
+    }
+
+    .roadmap-step p {
+        font-size: 15px;
+    }
+
+    /* Hide desktop arrows on phones */
+    .roadmap-step:not(:last-child)::before,
+    .roadmap-step:not(:last-child)::after {
+        display: none;
+    }
+}
