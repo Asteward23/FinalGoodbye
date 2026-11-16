@@ -396,3 +396,23 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
+
+/* JavaScript Security - Safe Text Display */
+
+document.addEventListener("DOMContentLoaded", () => {
+    const securityInput = document.getElementById("security-input");
+    const securityButton = document.getElementById("security-demo-button");
+    const securityOutput = document.getElementById("security-output");
+
+    if (securityInput && securityButton && securityOutput) {
+        securityButton.addEventListener("click", () => {
+            const userInput = securityInput.value.trim();
+
+            if (userInput === "") {
+                securityOutput.textContent = "Please enter some text first.";
+            } else {
+                securityOutput.textContent = userInput;
+            }
+        });
+    }
+});
