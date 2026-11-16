@@ -245,7 +245,44 @@
 
 </section>
 
-     
+        
+<!-- JavaScript Security & Best Practices -->
+<section class="contact-security" aria-labelledby="security-heading">
+    <h2 id="security-heading">JavaScript Security &amp; Best Practices</h2>
+
+    <p>
+        Cross-site scripting (XSS) is a security issue that can occur
+        when a website treats untrusted user input as executable code.
+        One way to reduce this risk is to display user input as plain
+        text instead of interpreting it as HTML.
+    </p>
+
+    <p>
+        JavaScript's textContent property helps prevent this issue
+        by displaying text without executing HTML or JavaScript.
+        Client-side form validation also helps users enter the
+        required information, but server-side validation is still
+        necessary for security.
+    </p>
+
+    <div class="security-demo">
+        <h3>Safe Text Display Demonstration</h3>
+
+        <label for="security-input">Enter some text:</label>
+        <input
+            type="text"
+            id="security-input"
+            placeholder="Type a message"
+        >
+
+        <button type="button" id="security-demo-button">
+            Display Safely
+        </button>
+
+        <p id="security-output" aria-live="polite"></p>
+    </div>
+</section>
+
 
      
     <!-- Bottom Decorative Waves -->
