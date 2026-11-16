@@ -1,0 +1,292 @@
+@charset "UTF-8";
+
+/* About Page */
+body {
+    margin: 0;
+    background-color: #071121;
+    color: #ffffff;
+}
+
+.about-intro,
+.about-information,
+.about-applications {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Introduction */
+.about-intro {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: center;
+    gap: 45px;
+    padding: 30px 5% 20px;
+}
+
+.about-eyebrow {
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin: 0 0 18px;
+}
+
+.about-eyebrow::before {
+    content: "";
+    display: inline-block;
+    width: 55px;
+    height: 3px;
+    background-color: #18b9ff;
+    vertical-align: middle;
+    margin-right: 18px;
+}
+
+.about-intro h1 {
+    font-size: clamp(38px, 4.2vw, 64px);
+    line-height: 1.05;
+    margin: 0 0 24px;
+}
+
+.about-intro h1 span {
+    color: #22b5ff;
+}
+
+.about-intro-text > p:not(.about-eyebrow) {
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    color: #f0f3fa;
+    margin: 0;
+}
+
+.about-intro-image img {
+    display: block;
+    width: 100%;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #1d548a;
+}
+
+/* Informational Cards */
+.about-information {
+    padding: 0 5%;
+    margin-top: 0;
+}
+
+.about-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.about-card {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    align-items: start;
+    gap: 18px;
+    padding: 24px 22px;
+    background: #101e34;
+    border: 1px solid #2583ff;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.about-card-icon {
+    color: #2583ff;
+}
+
+.about-card:nth-child(3) .about-card-icon {
+    color: #f5c451;
+}
+
+.about-card-icon svg {
+    width: 65px;
+    height: 65px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.about-card h2 {
+    font-size: clamp(20px, 1.8vw, 27px);
+    line-height: 1.15;
+    margin: 0 0 18px;
+}
+
+.about-card p {
+    font-family: Arial, sans-serif;
+    color: #f0f3fa;
+    font-size: 15px;
+    line-height: 1.55;
+    margin: 0;
+}
+
+/* Real-World Applications */
+.about-applications {
+    margin-top: 18px;
+    margin-bottom: 35px;
+    padding: 20px 28px 26px;
+    width: 90%;
+    box-sizing: border-box;
+    background: #101e34;
+    border: 1px solid #2583ff;
+    border-radius: 10px;
+}
+
+.applications-heading {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    margin-bottom: 12px;
+}
+
+.applications-heading-icon {
+    color: #2583ff;
+}
+
+.applications-heading-icon svg {
+    width: 85px;
+    height: 75px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.applications-heading h2 {
+    font-size: 32px;
+    margin: 0 0 5px;
+}
+
+.applications-heading p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+.application-list {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.application-item {
+    text-align: center;
+    padding: 5px 20px;
+    border-right: 1px solid #2583ff;
+}
+
+.application-item:last-child {
+    border-right: none;
+}
+
+.application-icon {
+    margin-bottom: 6px;
+}
+
+.application-item:nth-child(1) .application-icon {
+    color: #00d9e8;
+}
+
+.application-item:nth-child(2) .application-icon {
+    color: #168fff;
+}
+
+.application-item:nth-child(3) .application-icon {
+    color: #d1d5db;
+}
+
+.application-item:nth-child(4) .application-icon {
+    color: #ff9f43;
+}
+
+.application-item:nth-child(5) .application-icon {
+    color: #ff4fc3;
+}
+
+.application-icon svg {
+    width: 52px;
+    height: 52px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.application-item h3 {
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.application-item p {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Footer */
+footer {
+    padding: 20px 6%;
+    text-align: center;
+    background: #090f1f;
+    color: #c4cde0;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+/* Responsive Layout */
+@media (max-width: 1050px) {
+    .about-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .about-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .application-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .application-item {
+        border-right: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .about-intro,
+    .about-information {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .about-intro-image img {
+        height: auto;
+    }
+
+    .about-card {
+        grid-template-columns: 55px minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .about-card-icon svg {
+        width: 48px;
+        height: 48px;
+    }
+
+    .application-list {
+        grid-template-columns: 1fr;
+    }
+
+    .applications-heading h2 {
+        font-size: 25px;
+    }
+}

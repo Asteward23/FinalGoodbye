@@ -1,0 +1,484 @@
+@charset "UTF-8";
+
+/* Development Page */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #061326;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body,
+body * {
+    box-sizing: border-box;
+}
+
+/* Main Page Layout */
+main {
+    display: grid;
+    grid-template-columns: minmax(0, 2.15fr) minmax(0, 1fr);
+    grid-template-areas:
+        "intro intro"
+        "process tasks"
+        "matters matters";
+    gap: 22px 18px;
+    width: min(94%, 1510px);
+    margin: 0 auto;
+    padding: 18px 0 30px;
+}
+
+/* Introduction */
+.development-intro {
+    grid-area: intro;
+    display: grid;
+    grid-template-columns: minmax(0, 0.94fr) minmax(0, 1.06fr);
+    align-items: center;
+    gap: 75px;
+    min-width: 0;
+    padding: 0 5px 0;
+}
+
+.development-intro-text {
+    min-width: 0;
+}
+
+.development-intro h1 {
+    position: relative;
+    width: max-content;
+    max-width: 100%;
+    margin: 0 0 28px;
+    padding-bottom: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: clamp(38px, 3.65vw, 61px);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -1.8px;
+    white-space: nowrap;
+}
+
+.development-intro h1 span {
+    color: #159dff;
+}
+
+.development-intro h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 145px;
+    height: 3px;
+    background: #00b7ff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #00b7ff;
+}
+
+.development-intro h2 {
+    margin: 0 0 22px;
+    font-size: clamp(23px, 2vw, 32px);
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+}
+
+.development-intro-text > p {
+    margin: 0 0 26px;
+    color: #e5eaf6;
+    font-size: clamp(16px, 1.3vw, 21px);
+    line-height: 1.38;
+}
+
+/* Introduction Image */
+.development-intro-image {
+    min-width: 0;
+}
+
+.development-intro-image img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.85 / 1;
+    object-fit: cover;
+    border: 1px solid #1374da;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 119, 255, 0.28);
+}
+
+/* Introduction Buttons */
+.development-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.process-button,
+.basics-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 54px;
+    padding: 12px 22px;
+    border-radius: 11px;
+    font-size: 17px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.process-button {
+    background: linear-gradient(110deg, #00c5f5, #328fff);
+    border: 2px solid #13b9ff;
+    color: #061326;
+    box-shadow: 0 0 14px rgba(0, 164, 255, 0.35);
+}
+
+.process-button:hover {
+    background: #58c8ff;
+    box-shadow: 0 0 20px rgba(0, 164, 255, 0.65);
+}
+
+.basics-button {
+    background: #061329;
+    border: 2px solid #68c9ff;
+    color: #ffffff;
+}
+
+.basics-button:hover {
+    background: #102e58;
+    box-shadow: 0 0 16px rgba(0, 164, 255, 0.35);
+}
+
+.process-button:focus-visible,
+.basics-button:focus-visible {
+    outline: 3px solid #ffffff;
+    outline-offset: 4px;
+}
+
+/* Development Process Panel */
+.development-process {
+    grid-area: process;
+    min-width: 0;
+    margin: 0;
+    padding: 20px 22px 22px;
+    background: linear-gradient(135deg, #071b39, #06132c);
+    border: 2px solid #087aff;
+    border-radius: 21px;
+    box-shadow: 0 0 17px rgba(0, 125, 255, 0.3);
+    scroll-margin-top: 100px;
+}
+
+.development-process > h2 {
+    margin: 0 0 22px;
+    font-size: clamp(25px, 2.15vw, 35px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -1px;
+    white-space: nowrap;
+}
+
+.development-process > h2 span {
+    color: #08c3ff;
+}
+
+/* Process Cards */
+.process-steps {
+    display: grid;
+    grid-template-columns:
+        minmax(0, 1fr) 24px
+        minmax(0, 1fr) 24px
+        minmax(0, 1fr) 24px
+        minmax(0, 1fr);
+    align-items: center;
+    gap: 9px;
+}
+
+.process-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 177px;
+    padding: 15px 8px;
+    background: linear-gradient(160deg, #0c2551, #061630);
+    border: 2px solid #008cff;
+    border-radius: 17px;
+    text-align: center;
+    box-shadow: 0 0 11px rgba(0, 153, 255, 0.28);
+}
+
+.process-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 52px;
+    margin-bottom: 4px;
+    color: #13baff;
+    font-size: 43px;
+    font-weight: 800;
+    line-height: 1;
+    text-shadow: 0 0 12px rgba(0, 170, 255, 0.6);
+}
+
+.process-step h3 {
+    margin: 0 0 12px;
+    color: #ffffff;
+    font-size: clamp(14px, 1.2vw, 20px);
+    font-weight: 700;
+}
+
+.process-step p {
+    margin: 0;
+    color: #edf3ff;
+    font-size: clamp(11px, 0.98vw, 16px);
+    line-height: 1.25;
+}
+
+.process-arrow {
+    color: #b4e2ff;
+    font-size: 29px;
+    font-weight: 800;
+    text-align: center;
+    text-shadow: 0 0 8px rgba(0, 153, 255, 0.45);
+}
+
+/* Key Development Tasks Panel */
+.development-tasks {
+    grid-area: tasks;
+    min-width: 0;
+    margin: 0;
+    padding: 20px 22px 22px;
+    background: linear-gradient(135deg, #071b39, #06132c);
+    border: 2px solid #087aff;
+    border-radius: 21px;
+    box-shadow: 0 0 17px rgba(0, 125, 255, 0.3);
+    scroll-margin-top: 100px;
+}
+
+.development-tasks h2 {
+    margin: 0 0 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #4287d5;
+    font-size: clamp(21px, 1.8vw, 30px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.8px;
+    white-space: nowrap;
+}
+
+.development-tasks h2 span {
+    color: #08c3ff;
+}
+
+.development-tasks ul {
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.development-tasks li {
+    position: relative;
+    padding-left: 36px;
+    color: #f0f4ff;
+    font-size: clamp(13px, 1.12vw, 18px);
+    line-height: 1.35;
+}
+
+.development-tasks li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    background: #25aaff;
+    border-radius: 4px;
+    color: #061326;
+    font-size: 19px;
+    font-weight: 900;
+    box-shadow: 0 0 9px rgba(0, 153, 255, 0.35);
+}
+
+/* Why It Matters Panel */
+.development-matters {
+    grid-area: matters;
+    display: grid;
+    grid-template-columns: 130px 310px minmax(0, 1fr);
+    align-items: center;
+    gap: 22px;
+    min-width: 0;
+    margin: 0;
+    padding: 22px 30px;
+    background: linear-gradient(135deg, #071b39, #06132c);
+    border: 2px solid #087aff;
+    border-radius: 21px;
+    box-shadow: 0 0 17px rgba(0, 125, 255, 0.3);
+}
+
+.matters-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 115px;
+    height: 75px;
+    color: #159dff;
+    font-size: 66px;
+    filter: drop-shadow(0 0 9px rgba(0, 153, 255, 0.65));
+}
+
+.development-matters h2 {
+    margin: 0;
+    font-size: clamp(26px, 2.15vw, 35px);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.8px;
+    white-space: nowrap;
+}
+
+.development-matters h2 span {
+    color: #08c3ff;
+}
+
+.development-matters p {
+    min-width: 0;
+    margin: 0;
+    padding-left: 45px;
+    border-left: 2px solid #4dcaff;
+    color: #e9effb;
+    font-size: clamp(15px, 1.2vw, 19px);
+    line-height: 1.4;
+}
+
+/* Responsive Layout */
+@media (max-width: 1250px) {
+    main {
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-areas:
+            "intro"
+            "process"
+            "tasks"
+            "matters";
+    }
+
+    .development-process > h2,
+    .development-tasks h2 {
+        white-space: normal;
+    }
+
+    .development-intro h1 {
+        font-size: clamp(34px, 4vw, 53px);
+    }
+
+    .development-intro h2 br,
+    .development-intro-text > p br,
+    .development-matters p br {
+        display: none;
+    }
+
+    .process-step h3 {
+        font-size: 19px;
+    }
+
+    .process-step p {
+        font-size: 15px;
+    }
+
+    .development-tasks li {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 800px) {
+    .development-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .development-intro h1 {
+        white-space: normal;
+    }
+
+    .process-steps {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+    }
+
+    .process-arrow {
+        display: none;
+    }
+
+    .development-matters {
+        grid-template-columns: 80px minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .matters-icon {
+        width: 75px;
+        height: 65px;
+        font-size: 48px;
+    }
+
+    .development-matters p {
+        grid-column: 1 / -1;
+        padding: 16px 0 0;
+        border-left: none;
+        border-top: 2px solid #4dcaff;
+    }
+}
+
+@media (max-width: 500px) {
+    main {
+        width: 92%;
+    }
+
+    .development-intro h1 {
+        font-size: 38px;
+    }
+
+    .development-intro h2 {
+        font-size: 23px;
+    }
+
+    .development-buttons {
+        flex-direction: column;
+    }
+
+    .process-button,
+    .basics-button {
+        width: 100%;
+    }
+
+    .process-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .process-step {
+        min-height: 165px;
+    }
+
+    .development-process,
+    .development-tasks,
+    .development-matters {
+        padding: 18px;
+    }
+
+    .development-process > h2 {
+        font-size: 27px;
+    }
+
+    .development-tasks h2 {
+        font-size: 24px;
+    }
+
+    .development-matters h2 {
+        font-size: 25px;
+    }
+}

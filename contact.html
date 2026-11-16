@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Final Goodbye | Contact</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+
+<body>
+
+    
+<!-- Header and Navigation -->
+<header class="site-header">
+
+    <a href="index.html" class="logo">
+        <span class="logo-icon">&lt; / &gt;</span>
+
+        <span class="logo-text">
+            <span class="logo-final">Final</span>
+            <span class="logo-goodbye">Goodbye</span>
+        </span>
+    </a>
+
+    <nav class="main-nav">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="languages.html">Languages</a>
+        <a href="development.html">Development</a>
+        <a href="tools.html">Tools</a>
+        <a href="careers.html">Careers</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+
+</header>
+
+
+    
+<main>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+
+        <div class="contact-hero-content">
+
+            <h1>Get in <span>Touch</span></h1>
+
+            <p>
+                Have a question, suggestion, or want to learn more about<br>
+                software engineering? Feel free to reach out using the<br>
+                contact form below or through the contact information<br>
+                provided.
+            </p>
+
+        </div>
+
+    </section>
+	
+	 
+<!-- Contact Form Section -->
+<section class="contact-section">
+
+    <div class="message-card">
+
+        <h2 class="message-title">
+            <span class="message-icon">&#9993;</span>
+            Send a Message
+        </h2>
+
+        <form id="contact-form" action="https://formspree.io/f/maeoelww" method="POST">
+
+
+            <div class="form-group">
+                <label for="full-name">Full Name *</label>
+                <input
+                    type="text"
+                    id="full-name"
+                    name="full-name"
+                    placeholder="Enter your full name"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    placeholder="Enter your email address"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="subject">Subject *</label>
+
+                <select id="subject" name="subject" required>
+                    <option value="" selected>
+                        -- Select a Subject --
+                    </option>
+
+                    <option value="General Question">General Question</option>
+                    <option value="Software Engineering">Software Engineering</option>
+                    <option value="Programming Languages">Programming Languages</option>
+                    <option value="Software Development">Software Development</option>
+                    <option value="Development Tools">Development Tools</option>
+                    <option value="Career Opportunities">Career Opportunities</option>
+                    <option value="Specific Career Question">Specific Career Question</option>
+                    <option value="Website Feedback">Website Feedback</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message *</label>
+                <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Type your message here..."
+                    required
+                ></textarea>
+            </div>
+
+            <button type="submit" class="send-button">
+                <span class="send-icon">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     width="25"
+                     height="25"
+                     viewBox="0 0 24 24"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2.2"
+                     stroke-linecap="round"
+                     stroke-linejoin="round"
+                     aria-hidden="true">
+                     <path d="m22 2-7 20-4-9-9-4Z"/>
+                     <path d="M22 2 11 13"/>
+                 </svg>
+             </span>
+             Send Message
+         </button>
+
+        </form>
+
+        <div class="form-success" id="form-success" hidden>
+            &#10003; Thank you! Your message has been received.
+        </div>
+
+    </div>
+
+      
+<!-- Contact Information Card -->
+<div class="contact-info-card">
+
+    <h2 class="contact-info-title">
+        <span class="contact-info-icon">ⓘ</span>
+        Contact Information
+    </h2>
+
+    <p class="contact-info-description">
+        You can also reach out using the contact details below.
+		I'd be happy to hear from you!
+    </p>
+
+    <!-- Email -->
+    <div class="contact-detail-box">
+        <span class="contact-detail-icon">&#9993;</span>
+
+        <div class="contact-detail-text">
+            <h3>Email</h3>
+            <a href="mailto:aireanasteward@gmail.com">
+                aireanasteward@gmail.com
+            </a>
+        </div>
+    </div>
+
+    <!-- Phone -->
+    <div class="contact-detail-box">
+        <span class="contact-detail-icon">
+            <svg xmlns="http://www.w3.org/2000/svg"
+            width="48"
+            height="48"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2
+                     19.79 19.79 0 0 1-8.63-3.07
+                     19.5 19.5 0 0 1-6-6
+                     19.79 19.79 0 0 1-3.07-8.67
+                     A2 2 0 0 1 4.11 2h3
+                     a2 2 0 0 1 2 1.72
+                     c.12.96.35 1.9.68 2.81
+                     a2 2 0 0 1-.45 2.11L8.09 9.91
+                     a16 16 0 0 0 6 6l1.27-1.27
+                     a2 2 0 0 1 2.11-.45
+                     c.91.33 1.85.56 2.81.68
+                     A2 2 0 0 1 22 16.92z"/>
+        </svg>
+    </span>
+
+
+        <div class="contact-detail-text">
+            <h3>Phone</h3>
+            <a href="tel:6017157872">
+                601-715-7872
+            </a>
+        </div>
+    </div>
+
+    <!-- Address -->
+    <div class="contact-detail-box">
+        <span class="contact-detail-icon">
+            <svg xmlns="http://www.w3.org/2000/svg"
+            width="48"
+            height="48"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true">
+            <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"/>
+            <circle cx="12" cy="10" r="3"/>
+        </svg>
+    </span>
+
+
+        <div class="contact-detail-text">
+            <h3>Address</h3>
+            <p>2026 Nonyabusiness Avenue Dr.</p>
+        </div>
+    </div>
+
+</div>
+
+
+</section>
+
+     
+
+     
+    <!-- Bottom Decorative Waves -->
+    <div class="contact-bottom-decoration"></div>
+
+
+</main>
+
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

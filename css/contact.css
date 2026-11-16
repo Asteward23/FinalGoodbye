@@ -1,0 +1,353 @@
+@charset "UTF-8";
+
+/* Contact Page Hero */
+
+
+.contact-hero {
+    position: relative;
+    width: 100%;
+    min-height: 420px;
+    padding: 65px 6%;
+    display: flex;
+    align-items: center;
+
+    background-color: #071326;
+    background-image: url("../images/contact.png");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    box-sizing: border-box;
+	border-bottom: 1px solid #2583ff;
+    box-shadow: 0 3px 10px rgba(37, 131, 255, 0.25);
+}
+
+
+.contact-hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 750px;
+    font-family: Calibri, Carlito, Arial, sans-serif;
+}
+
+
+.contact-hero h1 {
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 76px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.1;
+    margin: 0 0 14px;
+}
+
+
+.contact-hero h1 span {
+    color: #00d9ff;
+}
+
+
+.contact-hero p {
+    color: #d5e0f2;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.35;
+    letter-spacing: 0;
+    max-width: 650px;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Contact Form Section */
+
+.contact-section {
+    background: #061126;
+    padding: 44px 6% 70px;
+    display: flex;
+    align-items: flex-start;
+	justify-content: center;
+    gap: 30px;
+}
+
+/* Large Message Card */
+
+.message-card {
+    width: 100%;
+    max-width: 595px;
+    padding: 32px 35px;
+    background: linear-gradient(145deg, #07172f, #081d3c);
+    border: 2px solid #00d9ff;
+    border-radius: 22px;
+    box-shadow: 0 0 18px rgba(0, 217, 255, 0.12);
+    box-sizing: border-box;
+}
+
+/* Card Heading */
+
+.message-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #ffffff;
+    font-family: Calibri, Carlito, Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    margin: 0 0 24px;
+}
+
+.message-icon {
+    color: #00e5ff;
+    font-size: 43px;
+    line-height: 1;
+}
+
+/* Form Labels and Fields */
+
+.form-group {
+    margin-bottom: 21px;
+}
+
+.form-group label {
+    display: block;
+    color: #ffffff;
+    font-family: Calibri, Carlito, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    background: #102b4e;
+    color: #ffffff;
+    border: 2px solid #367db9;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-family: Calibri, Carlito, Arial, sans-serif;
+    font-size: 18px;
+    box-sizing: border-box;
+    outline: none;
+}
+
+.form-group input,
+.form-group select {
+    height: 46px;
+}
+
+.form-group textarea {
+    height: 116px;
+    resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #d0d8e8;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #00e5ff;
+}
+
+.form-group select option {
+    background: #102b4e;
+    color: #ffffff;
+}
+
+/* Send Message Button */
+
+.send-button {
+    width: 100%;
+    height: 57px;
+    background: linear-gradient(90deg, #00dfff, #00c7f4);
+    border: none;
+    border-radius: 16px;
+    color: #001529;
+    font-family: Calibri, Carlito, Arial, sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.send-button:hover {
+    background: #43eaff;
+}
+
+.send-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #001529;
+}
+
+/* Success Confirmation */
+
+.form-success {
+    margin-top: 18px;
+    padding: 15px;
+    text-align: center;
+    color: #ffffff;
+    background: #073138;
+    border: 2px solid #00e8d0;
+    border-radius: 15px;
+    font-family: Calibri, Carlito, Arial, sans-serif;
+    font-size: 17px;
+}
+
+.form-success[hidden] {
+    display: none;
+}
+
+
+/* Bottom Decorative Waves */
+
+.contact-bottom-decoration {
+    width: 100%;
+    height: 300px;
+    background-color: #061126;
+    background-image: url("../images/contact-bottom.png");
+    background-position: center center;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+
+/* Contact Information Card */
+
+.contact-info-card {
+    width: 100%;
+    max-width: 595px;
+    min-height: 100%;
+    padding: 32px 35px;
+    background: linear-gradient(145deg, #07172f, #081d3c);
+    border: 2px solid #00d9ff;
+    border-radius: 22px;
+    box-shadow: 0 0 18px rgba(0, 217, 255, 0.12);
+    box-sizing: border-box;
+}
+
+/* Contact Information Heading */
+
+.contact-info-title {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #ffffff;
+    font-family: Calibri, Carlito, Arial, sans-serif;
+    font-size: 36px;
+    font-weight: 800;
+    margin: 0 0 24px;
+}
+
+.contact-info-icon {
+    color: #00e5ff;
+    font-size: 43px;
+    line-height: 1;
+}
+
+/* Introductory Paragraph */
+
+.contact-info-description {
+    color: #d5e0f2;
+    font-family: Calibri, Carlito, Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.5;
+    margin: 0 0 30px;
+}
+
+/* Individual Contact Detail Boxes */
+
+.contact-detail-box {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    min-height: 110px;
+    padding: 15px 25px;
+    margin-bottom: 22px;
+    background: linear-gradient(135deg, #0a233f, #102a4c);
+    border: 2px solid #298fd0;
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
+/* Email, Phone, and Address Icons */
+
+.contact-detail-icon {
+    flex-shrink: 0;
+    color: #00e5ff;
+    font-size: 43px;
+    line-height: 1;
+    width: 55px;
+    text-align: center;
+}
+
+/* Contact Detail Text */
+
+.contact-detail-text h3 {
+    color: #ffffff;
+    font-family: Calibri, Carlito, Arial, sans-serif;
+    font-size: 21px;
+    font-weight: 800;
+    margin: 0 0 5px;
+}
+
+.contact-detail-text a,
+.contact-detail-text p {
+    color: #00e5ff;
+    font-family: Calibri, Carlito, Arial, sans-serif;
+    font-size: 19px;
+    font-weight: 700;
+    text-decoration: none;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.contact-detail-text a:hover {
+    text-decoration: underline;
+}
+
+/* Match the Height of Both Main Cards */
+
+.contact-section {
+    align-items: stretch;
+}
+
+
+
+/* Main Contact Card Sizing */
+
+.message-card {
+    flex: 0 1 560px;
+    max-width: 560px;
+    min-width: 0;
+}
+
+.contact-info-card {
+    flex: 0 1 500px;
+    max-width: 500px;
+    min-width: 0;
+    padding: 40px 25px;
+}
+
+/* Keep Both Cards Equal in Height */
+
+.contact-section {
+    align-items: stretch;
+}
+
+.message-card,
+.contact-info-card {
+    min-height: 720px;
+}
+
+

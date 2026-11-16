@@ -1,0 +1,260 @@
+@charset "UTF-8";
+
+/* Homepage Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    padding: 45px 5%;
+    box-sizing: border-box;
+
+    background-image: url("../images/hero-background.png");
+    background-size: cover;
+    background-position: center 45%;
+    background-repeat: no-repeat;
+}
+
+
+/* Hero Text */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    flex: 1;
+    max-width: 620px;
+    transform: translateY(-35px);
+}
+
+.eyebrow {
+    color: #2583ff;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin: 0 0 18px;
+}
+
+.title-white {
+    color: #ffffff;
+}
+
+.title-blue {
+    color: #2583ff;
+}
+
+.hero-content h2 {
+    color: #ffffff;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 1.3;
+    margin: 0 0 20px;
+}
+
+.hero-content p:not(.eyebrow) {
+    color: #cbd5e1;
+    font-size: 17px;
+    line-height: 1.8;
+    margin-bottom: 28px;
+}
+
+
+/* Hero Button */
+.main-button {
+    display: inline-block;
+    padding: 15px 34px;
+    background: #1769e8;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 50px;
+    transition: background 0.3s ease;
+}
+
+.main-button:hover {
+    background: #348cff;
+}
+
+
+
+/* Explore Key Topics */
+.topics {
+    background-color: #0b1120;
+    padding: 65px 3% 85px;
+}
+
+.topics-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+    margin-bottom: 45px;
+}
+
+.topics-heading h2 {
+    color: #ffffff;
+    font-size: 32px;
+    font-weight: 800;
+    text-align: center;
+    margin: 0;
+}
+
+.topics-heading h2 span {
+    color: #2583ff;
+}
+
+.heading-line {
+    width: 65px;
+    height: 2px;
+    background-color: #2583ff;
+}
+
+/* Topic Cards */
+.topics-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+
+.topic-card {
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr); 28px;
+    grid-template-rows: auto 1fr;
+    column-gap: 15px;
+    align-items: center;
+	align-content: center
+    min-height: 115px;
+    padding: 18px 20px;
+    box-sizing: border-box;
+    background-color: #121d32;
+    border: 1px solid #263957;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+
+.topic-card:hover {
+    transform: translateY(-5px);
+    border-color: #2583ff;
+}
+
+.topic-icon {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    width: 52px;
+    height: 52px;
+    margin: 0;
+    color: #2583ff;
+	align-self: center;
+}
+
+.topic-icon svg {
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+.topic-icon img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+
+.topic-card h3 {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: end;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0 0 5px;
+}
+
+.topic-card p {
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+    color: #d5e0f2;
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Smaller Screens */
+@media (max-width: 900px) {
+    .topics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .topics-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .topics-heading h2 {
+        font-size: 25px;
+    }
+
+    .heading-line {
+        width: 25px;
+    }
+}
+
+
+/* Card Arrows */
+.card-arrow {
+    grid-column: 3;
+    grid-row: 1 / 3;
+    align-self: center;
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #2583ff;
+    border-radius: 50%;
+    color: #2583ff;
+    font-size: 18px;
+    line-height: 1;
+}
+
+
+/* Start Exploring Arrow */
+.main-button span {
+    margin-left: 10px;
+    font-size: 20px;
+    vertical-align: middle;
+}
+
+
+
+/* Center Card Content Horizontally */
+.topic-icon {
+    transform: translateX(25px);
+}
+
+.topic-card h3,
+.topic-card p {
+    position: relative;
+    left: 25px;
+}

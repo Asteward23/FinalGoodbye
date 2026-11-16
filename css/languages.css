@@ -1,0 +1,572 @@
+@charset "UTF-8";
+
+/* Programming Languages Page */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #061426;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    max-width: 1536px;
+    margin: 0 auto;
+}
+
+/* Introduction */
+.languages-intro {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: center;
+    gap: 45px;
+    padding: 20px 5% 10px;
+}
+
+.languages-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 0 0 12px;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+.languages-eyebrow::before {
+    content: "";
+    width: 58px;
+    height: 3px;
+    background: #00cfff;
+    flex-shrink: 0;
+}
+
+.languages-intro h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 4vw, 62px);
+    line-height: 0.98;
+    margin: 0 0 14px;
+    color: #ffffff;
+}
+
+.languages-intro h1 span {
+    color: #13b5ff;
+}
+
+.languages-intro-text > p:last-child {
+    font-size: 18px;
+    line-height: 1.35;
+    margin: 0;
+    color: #f2f5fc;
+}
+
+.languages-intro-image img {
+    display: block;
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    border-radius: 9px;
+    border: 1px solid #1378bc;
+}
+
+/* Three Information Cards */
+.languages-information {
+    padding: 0 5%;
+}
+
+.languages-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.languages-card {
+    display: grid;
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 12px;
+    padding: 15px 20px;
+    min-height: 166px;
+    background: linear-gradient(145deg, #09213c, #07182d);
+    border: 1px solid #00aaff;
+    border-radius: 11px;
+}
+
+.languages-card-icon {
+    color: #13aaff;
+    font-size: 64px;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+}
+
+.languages-card h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(20px, 1.8vw, 27px);
+    line-height: 1.1;
+    margin: 0 0 10px;
+}
+
+.languages-card p {
+    font-size: 15px;
+    line-height: 1.45;
+    margin: 0;
+    color: #f2f5fc;
+}
+
+/* Lower Two-Column Content */
+.languages-content {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+	align-items: start;
+    gap: 16px;
+    padding: 16px 4% 30px;
+}
+
+.popular-languages,
+.language-explorer,
+.language-recommendation {
+    background: linear-gradient(145deg, #09213b, #06172b);
+    border: 1px solid #00aaff;
+    border-radius: 12px;
+}
+
+.popular-languages {
+    padding: 12px 14px 14px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 12px;
+}
+
+.section-icon {
+    color: #13aaff;
+    font-size: 44px;
+    font-weight: bold;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.section-heading h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(24px, 2.1vw, 31px);
+    line-height: 1.1;
+    margin: 0 0 5px;
+}
+
+.section-heading p {
+    font-size: 15px;
+    line-height: 1.35;
+    margin: 0;
+}
+
+/* Popular Programming Languages */
+.language-table {
+    display: flex;
+    flex-direction: column;
+}
+
+.language-row {
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr);
+    min-height: 66px;
+    border: 1px solid #009dff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: -1px;
+}
+
+.language-name {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 6px 16px;
+    border-right: 1px solid #009dff;
+}
+
+.language-name h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.language-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+/* Programming Language Logo Colors */
+
+.language-symbol.python {
+    background: transparent;
+    color: #ffffff;
+}
+
+
+.language-symbol.java {
+    background: transparent;
+    color: #f89820;
+    font-size: 32px;
+}
+
+.language-symbol.javascript {
+    background: #f7df1e;
+    color: #111111;
+    border-radius: 2px;
+    font-size: 22px;
+}
+
+.language-symbol.cpp {
+    background: #00599c;
+    color: #ffffff;
+}
+
+.language-symbol.csharp {
+    background: #68217a;
+    color: #ffffff;
+}
+
+.language-row > p {
+    align-self: center;
+    padding: 7px 14px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Interactive Panels */
+.languages-interactive {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 15px;
+    align-content: start;
+}
+
+.language-explorer,
+.language-recommendation {
+    position: relative;
+    padding: 20px 22px;
+    overflow: hidden;
+}
+
+.language-explorer {
+    min-height: 155px;
+}
+
+.language-recommendation {
+    min-height: 220px;
+}
+
+.languages-interactive .section-heading {
+    gap: 18px;
+}
+
+.languages-interactive .section-heading p {
+    max-width: 410px;
+}
+
+/* Glowing Blue Buttons */
+#showLanguagesBtn,
+#recommendLanguageBtn {
+    display: inline-block;
+    min-height: 41px;
+    padding: 8px 30px;
+    background: #06213a;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    border: 2px solid #00d5ff;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow:
+        0 0 5px #00d5ff,
+        0 0 12px rgba(0, 213, 255, 0.8),
+        inset 0 0 8px rgba(0, 213, 255, 0.15);
+    transition:
+        background 0.3s ease,
+        box-shadow 0.3s ease,
+        transform 0.3s ease;
+}
+
+#showLanguagesBtn:hover,
+#recommendLanguageBtn:hover {
+    background: #08416b;
+    box-shadow:
+        0 0 10px #00d5ff,
+        0 0 22px rgba(0, 213, 255, 0.9);
+    transform: translateY(-2px);
+}
+
+#showLanguagesBtn:focus-visible,
+#recommendLanguageBtn:focus-visible {
+    outline: 2px solid #ffffff;
+    outline-offset: 4px;
+}
+
+#showLanguagesBtn {
+    margin-left: 68px;
+}
+
+#recommendLanguageBtn {
+    margin-top: 12px;
+    margin-left: 68px;
+}
+
+/* Interest Dropdown Menu */
+#programmingInterest {
+    display: block;
+    width: min(370px, calc(100% - 68px));
+    min-height: 40px;
+    margin-left: 68px;
+    padding: 8px 14px;
+    background: #06172b;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    border: 2px solid #d7e9ff;
+    border-radius: 7px;
+    cursor: pointer;
+}
+
+#programmingInterest:focus {
+    outline: none;
+    border-color: #00d5ff;
+    box-shadow: 0 0 10px rgba(0, 213, 255, 0.6);
+}
+
+#programmingInterest option {
+    background: #06172b;
+    color: #ffffff;
+}
+
+/* JavaScript Results */
+.language-results {
+    margin: 12px 0 0 68px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #e7f5ff;
+}
+
+.language-results:empty {
+    display: none;
+}
+
+.language-results ul {
+    margin: 6px 0;
+    padding-left: 20px;
+}
+
+.recommendation-result {
+    margin: 12px 0 0 68px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #bceeff;
+}
+
+.recommendation-result:empty {
+    display: none;
+}
+
+/* Accessibility */
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Footer */
+footer {
+    padding: 20px 6%;
+    background: #090f1f;
+    color: #c4cde0;
+    text-align: center;
+    font-size: 13px;
+}
+
+/* Responsive Design */
+@media (max-width: 1100px) {
+    .languages-intro {
+        grid-template-columns: 1fr;
+    }
+
+    .languages-intro-image img {
+        height: auto;
+        max-height: 400px;
+    }
+
+    .languages-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .languages-content {
+        grid-template-columns: 1fr;
+    }
+
+    .language-explorer,
+    .language-recommendation {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 650px) {
+    .languages-intro {
+        padding: 25px 5% 15px;
+    }
+
+    .languages-eyebrow {
+        font-size: 11px;
+        letter-spacing: 2px;
+    }
+
+    .languages-card {
+        grid-template-columns: 55px minmax(0, 1fr);
+    }
+
+    .languages-card-icon {
+        font-size: 44px;
+    }
+
+    .language-row {
+        grid-template-columns: 1fr;
+    }
+
+    .language-name {
+        border-right: none;
+        border-bottom: 1px solid #009dff;
+    }
+
+    .language-row > p {
+        padding: 12px;
+    }
+
+    #showLanguagesBtn,
+    #recommendLanguageBtn,
+    #programmingInterest,
+    .language-results,
+    .recommendation-result {
+        margin-left: 0;
+    }
+
+    #programmingInterest {
+        width: 100%;
+    }
+}
+
+
+
+/* Language Explorer Laptop Illustration */
+.language-explorer {
+    position: relative;
+}
+
+.explorer-illustration {
+    position: absolute;
+    right: 15px;
+    top: 30px;
+    width: 165px;
+    height: 120px;
+    pointer-events: none;
+}
+
+.explorer-illustration svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 9px rgba(0, 207, 255, 0.65));
+}
+
+/* Starting Language Rocket Illustration */
+.language-recommendation {
+    position: relative;
+}
+
+
+.recommendation-illustration {
+    position: absolute;
+    right: 12px;
+    bottom: 8px;
+    width: 195px;
+    height: 195px;
+    transform: rotate(25deg);
+    transform-origin: center center;
+    pointer-events: none;
+}
+
+
+.recommendation-illustration svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 10px rgba(0, 207, 255, 0.6));
+}
+
+/* Keep Text and Buttons Above Illustrations */
+.language-explorer .section-heading,
+.language-recommendation .section-heading,
+#showLanguagesBtn,
+#recommendLanguageBtn,
+#programmingInterest,
+.language-results,
+.recommendation-result {
+    position: relative;
+    z-index: 1;
+}
+
+/* Prevent Text From Overlapping Illustrations */
+.language-explorer .section-heading,
+.language-recommendation .section-heading {
+    padding-right: 155px;
+}
+
+/* Responsive Illustrations */
+@media (max-width: 650px) {
+    .explorer-illustration {
+        width: 100px;
+        height: 75px;
+        right: 5px;
+        top: 15px;
+        opacity: 0.5;
+    }
+
+    .recommendation-illustration {
+        width: 100px;
+        height: 100px;
+        right: 5px;
+        bottom: 5px;
+        opacity: 0.5;
+    }
+
+    .language-explorer .section-heading,
+    .language-recommendation .section-heading {
+        padding-right: 0;
+    }
+}
+
+
+/* Programming Language Logos */
+.language-symbol img {
+    display: block;
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+}
